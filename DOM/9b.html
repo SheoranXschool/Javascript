@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="
+        handelclick()
+        " class = "js-button">9a</button>
+        <button onclick="
+        handel9b()
+        " class = "js-button9b">9b</button>
+    <script>
+        function handelclick(){
+            let btnclick = document.querySelector(`.js-button`);
+            console.log(btnclick.innerHTML);
+        }
+        function handel9b(){
+            let btn = document.querySelector('.js-button9b');
+            if(btn.innerText === '9b'){
+              btn.innerText = '9b done!' }
+            else {
+                 btn.innerText = '9b'
+            }
+
+        }
+
+
+    </script>
+</body>
+</html>

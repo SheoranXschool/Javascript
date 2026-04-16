@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>typing game</title>
+</head>
+<body>
+    <p>
+        <b>Typing skill Test</b>
+    </p>
+    <input type="text" id="inp" placeholder="write : my name is payal" onkeydown="handleEnter(event)">
+<button onclick="btnclick()">submit</button>
+<p id="output"></p>
+<p id="time"></p>
+<script>
+let startTime = Date.now();
+
+function handleEnter(e){
+  if(e.key === 'Enter'){
+    btnclick();
+  }
+}
+
+function btnclick(){
+  let input = document.querySelector('#inp');
+  let text = input.value;
+
+  let output = document.querySelector('#output');
+  output.innerText = `Your name is: ${text}`;
+
+  let endTime = Date.now();
+  let timeTaken = (endTime - startTime) / 1000;
+
+  document.querySelector('#time').innerText = `Time: ${timeTaken}s`;
+}
+</script>
+</body>
+</html>

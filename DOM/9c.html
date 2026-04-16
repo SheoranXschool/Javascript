@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick=" btnclick('heads')">heads</button>
+    <button onclick=" btnclick('tails')">tails</button>
+    <p class="para"></p>
+    <script>
+            function btnclick(n){
+                let btn = document.querySelector('.para');
+                btn.innerText = `you chose: ${n}`
+            }
+ 
+
+    </script>
+</body>
+</html>
